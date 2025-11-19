@@ -1,11 +1,12 @@
 [project]
 name = "kattis"
 version = "0.1.0"
-description = ""
+description = "learning poetry as trubleshoot with it in this folder"
 authors = [
     {name = "Raouf",email = "khelfaoui.abderraouf@gmail.com"}
 ]
 readme = "README.md"
+homepage = "https://github.com/Abderaouf-KHELFAOUI/Poetry.git"
 requires-python = ">=3.12"
 dependencies = [
 ]
