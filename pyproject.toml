@@ -9,6 +9,8 @@ packages = [{ include = "kattis", from = "src" }]
 
 [tool.poetry.dependencies]
 python = ">=3.12"
+num2words = "^0.5.14"  # or whatever latest version
+
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.4"
