@@ -45,3 +45,5 @@ def solve_pair(n1, n2):
                 return f"{v1} {b1} {b2}"
     
     return "CANNOT MAKE EQUAL"
+
+#

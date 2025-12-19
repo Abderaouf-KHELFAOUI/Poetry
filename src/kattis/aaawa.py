@@ -49,3 +49,5 @@ def final_rank(T, P, F, teams, chants):
                 F += 1
 
     return F
+
+#

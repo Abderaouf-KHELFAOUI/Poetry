@@ -15,6 +15,7 @@ num2words = "^0.5.14"  # or whatever latest version
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.4"
 coverage = "^7.6.1"
+pylint = "^4.0.4"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
