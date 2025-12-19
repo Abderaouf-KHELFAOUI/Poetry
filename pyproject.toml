@@ -1,18 +1,21 @@
-[project]
+[tool.poetry]
 name = "kattis"
 version = "0.1.0"
-description = "learning poetry as trubleshoot with it in this folder"
-authors = [
-    {name = "Raouf",email = "khelfaoui.abderraouf@gmail.com"}
-]
+description = "learning poetry and troubleshooting within this folder"
+authors = ["Raouf <khelfaoui.abderraouf@gmail.com>"]
 readme = "README.md"
 homepage = "https://github.com/Abderaouf-KHELFAOUI/Poetry.git"
-requires-python = ">=3.12"
-dependencies = [
-]
+packages = [{ include = "kattis", from = "src" }]
 
-[tool.poetry]
-packages = [{include = "kattis", from = "src"}]
+[tool.poetry.dependencies]
+python = ">=3.12"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+coverage = "^7.6.1"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
