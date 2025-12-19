@@ -1,4 +1,4 @@
-from src.kattis.2048 import move_left, move_right, move_up, move_down
+from kattis.g2048 import move_left, move_right, move_up, move_down
 
 grid = [
     [2,0,2,2],

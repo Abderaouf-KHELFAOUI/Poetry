@@ -2,14 +2,14 @@
 # https://open.kattis.com/problems/bapc2023f
 #
 
-def final_rank(T, P, F, teams, chants):
+def final_rank(num_teams, num_problems, fav_team, teams, chants):
     # Count initial accepted submissions for each team
     accepted = [row.count('A') for row in teams]
 
     # Store indexes of pending submissions per team (left to right)
-    pending_pos = [[] for _ in range(T)]
-    for i in range(T):
-        for j in range(P):
+    pending_pos = [[] for _ in range(num_teams)]
+    for i in range(num_teams):
+        for j in range(num_problems):
             if teams[i][j] == 'P':
                 pending_pos[i].append(j)
 
@@ -17,7 +17,7 @@ def final_rank(T, P, F, teams, chants):
     for _, result in chants:
         # Find lowest-ranked team with pending submissions
         team = None
-        for i in range(T - 1, -1, -1):
+        for i in range(num_teams - 1, -1, -1):
             if pending_pos[i]:
                 team = i
                 break
