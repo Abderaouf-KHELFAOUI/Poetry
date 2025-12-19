@@ -3,6 +3,7 @@
 #
 
 def final_rank(num_teams, num_problems, fav_team, teams, chants):
+    F = fav_team
     # Count initial accepted submissions for each team
     accepted = [row.count('A') for row in teams]
 
@@ -43,7 +44,7 @@ def final_rank(num_teams, num_problems, fav_team, teams, chants):
             pending_pos.insert(new_rank, pend)
 
             # Adjust favourite team rank if needed
-            if F - 1 == team:
+            if (F - 1) == team:
                 F = new_rank + 1
             elif new_rank <= (F - 1) < team:
                 F += 1
